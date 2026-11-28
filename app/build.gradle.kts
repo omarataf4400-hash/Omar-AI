@@ -5,18 +5,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.cleaner"
+    namespace = "com.omar"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.cleaner"
+        applicationId = "com.omar"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
-        val geminiApiKey = System.getenv("GEMINI_API_KEY") ?: ""
-        buildConfigField("String", "GEMINI_API_KEY", "\"$geminiApiKey\"")
     }
 
     compileOptions {
@@ -33,7 +30,6 @@ android {
         buildConfig = true
     }
 }
-
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2024.10.00"))
     implementation("androidx.compose.ui:ui")
